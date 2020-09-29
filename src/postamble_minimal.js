@@ -63,6 +63,7 @@ function initRuntime(asm) {
   Module['dynCall'] = dynCall;
   Module['registerPthreadPtr'] = registerPthreadPtr;
   Module['_pthread_self'] = _pthread_self;
+  Module['_main_thread_futex'] = _main_thread_futex;
 
   if (ENVIRONMENT_IS_PTHREAD) {
     PThread.initWorker();
